@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <script>
+        // Function to hide the message after 3 seconds
+        window.onload = function() {
+            setTimeout(function() {
+                let messageElement = document.getElementById('message');
+                if (messageElement) {
+                    messageElement.style.display = 'none';
+                }
+            }, 3000); // 3 seconds
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Number Guessing Game</h1>
+        <p>Guess a number between 1 and 100</p>
+
+        {% if message %}
+            <div class="message">{{ message }}</div>
+        {% endif %}
+
+        {% if not game_over %}
+        <form method="POST">
+            <input type="number" name="guess" placeholder="Enter your guess" required min="1" max="100">
+            <br>
+            <button type="submit">Submit Guess</button>
+        </form>
+        <p>Attempt {{ attempts }} of {{ max_attempts }}</p>
+        {% else %}
+    <a href="{{ url_for('reset') }}">
+        <button class="play-again-btn">Play Again</button>
+    </a>
+{% endif %}
+    </div>
+</body>
+</html>

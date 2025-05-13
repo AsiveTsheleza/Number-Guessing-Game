@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #007BFF;
+    padding: 40px;
+    border-radius: 20px;
+    width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+}
+.subtext {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+}
+
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    padding: 15px;
+    width: 90%;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #003f7f;
+}
+
+.message {
+    font-size: 20px;
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+.play-again-btn {
+    padding: 15px 30px; 
+    background-color: #28a745; 
+    color: white;  
+    border: none;  
+    border-radius: 12px;  
+    font-size: 18px; 
+    cursor: pointer;  
+    transition: background-color 0.3s ease;  
+}
+
+.play-again-btn:hover {
+    background-color: #218838;  
+}
+
+
