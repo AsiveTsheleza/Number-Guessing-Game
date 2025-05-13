@@ -1,8 +1,10 @@
 import os
 from flask import Flask, render_template, request, redirect, url_for, session
 import random
-
+import secrets
 app = Flask(__name__)
+app.secret_key = os.environ.get('SECRET_KEY', 'dev_secret_key')
+
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
